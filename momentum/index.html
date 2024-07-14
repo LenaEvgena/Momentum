@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sass/style.css" />
+    <title>Momentum</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <header class="header">
+      <div class="player">
+        <div class="player-controls">
+          <div class="player_buttons">
+            <button class="play-prev player-icon"></button>
+            <button class="play player-icon"></button>
+            <button class="play-next player-icon"></button>
+          </div>
+          <div class="audio__controlls">
+            <div class="audio-track">River Flows In You</div>
+            <div class="audio_time audio_button-justify">
+              <span class="audio_current-time">00:00</span>
+              <span>/</span>
+              <span class="audio_duration">00:00</span>
+            </div>
+            <div class="audio__buttons">
+              <input
+                class="audio_button range range1 audio_button-justify"
+                type="range"
+                value="0"
+                min="0"
+                max="100"
+                step="0.5"
+                name="audio"
+                id="audio-range"
+              />
+            </div>
+            <div class="volume__container">
+              <button
+                class="controlls_button sound_button audio_button-justify"
+              >
+                <span class="audio_button sound_i audio_button-hover"></span>
+              </button>
+              <div class="volume_slider">
+                <input
+                  class="audio_button range range2"
+                  type="range"
+                  value="50"
+                  min="0"
+                  max="100"
+                  step="1"
+                  name="volume"
+                  id="sound"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="play-list"></ul>
+      </div>
+      <div class="weather">
+        <input type="text" class="city" placeholder="[Enter city]" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind">
+          <span class="wind-text"></span>
+          <span class="wind-data"></span>
+        </div>
+        <div class="humidity">
+          <span class="humidity-text"></span>
+          <span class="humidity-data"></span>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+      </div>
+      <time class="time"></time>
+      <date class="day"></date>
+      <div class="greeting-container">
+        <span class="greeting"></span>
+        <input type="text" class="userName" placeholder="[Enter your name]" />
+      </div>
+    </main>
+    <footer class="footer">
+      <button class="change-quote"></button>
+      <div class="quote-container">
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+      <div class="settings_icon"></div>
+      <div class="settings__menu">
+        <div class="menu_list">
+          <h3 class="set_set">Settings</h3>
+          <h4 class="set_lang">Languages</h4>
+          <ul>
+            <li class="set_language">
+              <label for="russian" class="set_name">
+                <input
+                  class="option-input checkbox language"
+                  type="radio"
+                  name="lang"
+                  id="russian"
+                  checked="checked"
+                  value="ru"
+                />
+                <span class="russian">Russian</span>
+              </label>
+            </li>
+            <li class="set_language">
+              <label for="english" class="set_name">
+                <input
+                  class="option-input checkbox language"
+                  type="radio"
+                  name="lang"
+                  id="english"
+                  value="en"
+                />
+                <span class="english">English</span>
+              </label>
+            </li>
+          </ul>
+          <h4 class="set_img">Images</h4>
+          <ul>
+            <li class="set_images">
+              <label for="git" class="set_name">
+                <input
+                  class="option-input checkbox images"
+                  type="radio"
+                  name="photoSource"
+                  id="git"
+                  checked="checked"
+                  value="git"
+                />
+                GitHub
+              </label>
+            </li>
+            <li class="set_images">
+              <label for="unsplash" class="set_name">
+                <input
+                  class="option-input checkbox images"
+                  type="radio"
+                  name="photoSource"
+                  id="unsplash"
+                  value="unsplash"
+                />
+                Unsplash API
+              </label>
+            </li>
+            <li class="set_images">
+              <label for="flickr" class="set_name">
+                <input
+                  class="option-input checkbox images"
+                  type="radio"
+                  name="photoSource"
+                  id="flickr"
+                  value="flickr"
+                />
+                Flickr API
+              </label>
+            </li>
+            <li class="set_images">
+              <label class="set_name">
+                <input class="hashTag" type="text" disabled="disabled" />
+                #tag
+              </label>
+            </li>
+          </ul>
+          <h4 class="set_show">Show</h4>
+          <ul>
+            <li class="set_show">
+              <label for="audio" class="set_name">
+                <input
+                  class="option-input blocks checkbox"
+                  type="checkbox"
+                  name="audio"
+                  id="audio"
+                  checked="checked"
+                  value="audio"
+                />
+                <span class="audio-bl">Audio</span>
+              </label>
+            </li>
+            <li class="set_show">
+              <label for="date" class="set_name">
+                <input
+                  class="option-input blocks checkbox"
+                  type="checkbox"
+                  name="date"
+                  id="date"
+                  checked="checked"
+                  value="date"
+                />
+                <span class="date-bl">Date</span>
+              </label>
+            </li>
+            <li class="set_show">
+              <label for="greeting" class="set_name">
+                <input
+                  class="option-input blocks checkbox"
+                  type="checkbox"
+                  name="greeting"
+                  id="greeting"
+                  checked="checked"
+                  value="greeting"
+                />
+                <span class="greeting-bl">Greeting</span>
+              </label>
+            </li>
+            <li class="set_show">
+              <label for="time" class="set_name">
+                <input
+                  class="option-input blocks checkbox"
+                  type="checkbox"
+                  name="time"
+                  id="time"
+                  checked="checked"
+                  value="time"
+                />
+                <span class="time-bl">Time</span>
+              </label>
+            </li>
+            <li class="set_show">
+              <label for="quote" class="set_name">
+                <input
+                  class="option-input blocks checkbox"
+                  type="checkbox"
+                  name="quote"
+                  id="quote"
+                  checked="checked"
+                  value="quote"
+                />
+                <span class="quote-bl">Quote</span>
+              </label>
+            </li>
+            <li class="set_show">
+              <label for="weather" class="set_name">
+                <input
+                  class="option-input blocks checkbox"
+                  type="checkbox"
+                  name="weather"
+                  id="weather"
+                  checked="checked"
+                  value="weather"
+                />
+                <span class="weather-bl">Weather</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__data">
+        <a href="https://github.com/LenaEvgena" target="_blank">
+          <p>Alena Astravukh</p>
+        </a>
+        <p>© 2021</p>
+        <a class="rsschool" href="https://rs.school/js/" target="_blank">
+          <img src="./assets/svg/rs_school_js.svg" alt="rsschool" />
+        </a>
+      </div>
+    </footer>
+    <script type="module" src="js/translation.js"></script>
+    <script type="module" src="js/script.js"></script>
+    <script type="module" src="js/weather.js"></script>
+    <script type="module" src="js/audioController.js"></script>
+    <script type="module" src="js/quotes.js"></script>
+    <script type="module" src="js/settings.js"></script>
+  </body>
+</html>

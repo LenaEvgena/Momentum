@@ -1,0 +1,1516 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Arial-MT";
+  src: url("../assets/fonts/Arial-MT.woff");
+  /* Путь к файлу со шрифтом */
+}
+:root {
+  font-size: 10px;
+}
+@media screen and (max-width: 500px) {
+  :root {
+    font-size: 9px;
+  }
+}
+
+body {
+  min-width: 32rem;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Arial", sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  transition: background-image 1s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h3 {
+  font-size: 3rem !important;
+}
+
+h4 {
+  font-size: 2.2rem !important;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-size: 100%;
+  -moz-user-select: -moz-none;
+  -o-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  vertical-align: baseline;
+  font-weight: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1em;
+  overflow-x: hidden;
+}
+
+a img, :link img, :visited img {
+  border: 0;
+}
+
+/*!
+ *  owfont-regular 1.0.0 by Deniz Fuchidzhiev - http://websygen.com
+ *  License - font: SIL OFL 1.1, css: MIT License
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: "owfont";
+  src: url("../assets/fonts/owfont-regular.eot?v=1.0.0");
+  src: url("../assets/fonts/owfont-regular.eot?#iefix&v=1.0.0") format("embedded-opentype"), url("../assets/fonts/owfont-regular.woff") format("woff"), url("../assets/fonts/owfont-regular.ttf") format("truetype"), url("../assets/fonts/owfont-regular.svg#owf-regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.owf {
+  display: inline-block;
+  font: normal normal normal 14px/1 owfont;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+/* makes the font 33% larger relative to the icon container */
+.owf-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+.owf-2x {
+  font-size: 2em;
+}
+
+.owf-3x {
+  font-size: 3em;
+}
+
+.owf-4x {
+  font-size: 4em;
+}
+
+.owf-5x {
+  font-size: 5em;
+}
+
+.owf-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+
+.owf-ul {
+  padding-left: 0;
+  margin-left: 2.14285714em;
+  list-style-type: none;
+}
+
+.owf-ul > li {
+  position: relative;
+}
+
+.owf-li {
+  position: absolute;
+  left: -2.14285714em;
+  width: 2.14285714em;
+  top: 0.14285714em;
+  text-align: center;
+}
+
+.owf-li.owf-lg {
+  left: -1.85714286em;
+}
+
+.owf-border {
+  padding: 0.2em 0.25em 0.15em;
+  border: solid 0.08em #eeeeee;
+  border-radius: 0.1em;
+}
+
+.owf-pull-right {
+  float: right;
+}
+
+.owf-pull-left {
+  float: left;
+}
+
+.owf.owf-pull-left {
+  margin-right: 0.3em;
+}
+
+.owf.owf-pull-right {
+  margin-left: 0.3em;
+}
+
+/* owfont uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+/*   Weather Condition Codes    */
+/*   Thunderstorm - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/* thunderstorm with light rain */
+.owf-200:before,
+.owf-200-d:before,
+.owf-200-n:before {
+  content: "\eb28";
+}
+
+/* thunderstorm with rain */
+.owf-201:before,
+.owf-201-d:before,
+.owf-201-n:before {
+  content: "\eb29";
+}
+
+/* thunderstorm with heavy rain */
+.owf-202:before,
+.owf-202-d:before,
+.owf-202-n:before {
+  content: "\eb2a";
+}
+
+/*  light thunderstorm  */
+.owf-210:before,
+.owf-210-d:before,
+.owf-210-n:before {
+  content: "\eb32";
+}
+
+/*  thunderstorm  */
+.owf-211:before,
+.owf-211-d:before,
+.owf-211-n:before {
+  content: "\eb33";
+}
+
+/*   heavy thunderstorm   */
+.owf-212:before,
+.owf-212-d:before,
+.owf-212-n:before {
+  content: "\eb34";
+}
+
+/*   ragged thunderstorm   */
+.owf-221:before,
+.owf-221-d:before,
+.owf-221-n:before {
+  content: "\eb3d";
+}
+
+/*  thunderstorm with light drizzle    */
+.owf-230:before,
+.owf-230-d:before,
+.owf-230-n:before {
+  content: "\eb46";
+}
+
+/*  thunderstorm with drizzle     */
+.owf-231:before,
+.owf-231-d:before,
+.owf-231-n:before {
+  content: "\eb47";
+}
+
+/* thunderstorm with heavy drizzle     */
+.owf-232:before,
+.owf-232-d:before,
+.owf-232-n:before {
+  content: "\eb48";
+}
+
+/*   Drizzle - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/*  light intensity drizzle */
+.owf-300:before,
+.owf-300-d:before,
+.owf-300-n:before {
+  content: "\eb8c";
+}
+
+/*  drizzle */
+.owf-301:before,
+.owf-301-d:before,
+.owf-301-n:before {
+  content: "\eb8d";
+}
+
+/*  heavy intensity drizzle  */
+.owf-302:before,
+.owf-302-d:before,
+.owf-302-n:before {
+  content: "\eb8e";
+}
+
+/*   light intensity drizzle rain  */
+.owf-310:before,
+.owf-310-d:before,
+.owf-310-n:before {
+  content: "\eb96";
+}
+
+/*  drizzle rain  */
+.owf-311:before,
+.owf-311-d:before,
+.owf-311-n:before {
+  content: "\eb97";
+}
+
+/* heavy intensity drizzle rain */
+.owf-312:before,
+.owf-312-d:before,
+.owf-312-n:before {
+  content: "\eb98";
+}
+
+/* shower rain and drizzle  */
+.owf-313:before,
+.owf-313-d:before,
+.owf-313-n:before {
+  content: "\eb99";
+}
+
+/* heavy shower rain and drizzle*/
+.owf-314:before,
+.owf-314-d:before,
+.owf-314-n:before {
+  content: "\eb9a";
+}
+
+/* shower drizzle */
+.owf-321:before,
+.owf-321-d:before,
+.owf-321-n:before {
+  content: "\eba1";
+}
+
+/*   Rain - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/* light rain  */
+.owf-500:before,
+.owf-500-d:before,
+.owf-500-n:before {
+  content: "\ec54";
+}
+
+/* moderate rain  */
+.owf-501:before,
+.owf-501-d:before,
+.owf-501-n:before {
+  content: "\ec55";
+}
+
+/* heavy intensity rain  */
+.owf-502:before,
+.owf-502-d:before,
+.owf-502-n:before {
+  content: "\ec56";
+}
+
+/* very heavy rain   */
+.owf-503:before,
+.owf-503-d:before,
+.owf-503-n:before {
+  content: "\ec57";
+}
+
+/* extreme rain    */
+.owf-504:before,
+.owf-504-d:before,
+.owf-504-n:before {
+  content: "\ec58";
+}
+
+/* freezing rain    */
+.owf-511:before,
+.owf-511-d:before,
+.owf-511-n:before {
+  content: "\ec5f";
+}
+
+/*  light intensity shower rain    */
+.owf-520:before,
+.owf-520-d:before,
+.owf-520-n:before {
+  content: "\ec68";
+}
+
+/* shower rain  */
+.owf-521:before,
+.owf-521-d:before,
+.owf-521-n:before {
+  content: "\ec69";
+}
+
+/*  heavy intensity shower rain  */
+.owf-522:before,
+.owf-522-d:before,
+.owf-522-n:before {
+  content: "\ec6a";
+}
+
+/* ragged shower rain  */
+.owf-531:before,
+.owf-531-d:before,
+.owf-531-n:before {
+  content: "\ec73";
+}
+
+/*   Snow - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/* light snow  */
+.owf-600:before,
+.owf-600-d:before,
+.owf-600-n:before {
+  content: "\ecb8";
+}
+
+/*  snow  */
+.owf-601:before,
+.owf-601-d:before,
+.owf-601-n:before {
+  content: "\ecb9";
+}
+
+/*   heavy snow   */
+.owf-602:before,
+.owf-602-d:before,
+.owf-602-n:before {
+  content: "\ecba";
+}
+
+/*  sleet  */
+.owf-611:before,
+.owf-611-d:before,
+.owf-611-n:before {
+  content: "\ecc3";
+}
+
+/*   shower sleet */
+.owf-612:before,
+.owf-612-d:before,
+.owf-612-n:before {
+  content: "\ecc4";
+}
+
+/* light rain and snow */
+.owf-615:before,
+.owf-615-d:before,
+.owf-615-n:before {
+  content: "\ecc7";
+}
+
+/* rain and snow  */
+.owf-616:before,
+.owf-616-d:before,
+.owf-616-n:before {
+  content: "\ecc8";
+}
+
+/* light shower snow  */
+.owf-620:before,
+.owf-620-d:before,
+.owf-620-n:before {
+  content: "\eccc";
+}
+
+/* shower snow  */
+.owf-621:before,
+.owf-621-d:before,
+.owf-621-n:before {
+  content: "\eccd";
+}
+
+/* heavy shower snow  */
+.owf-622:before,
+.owf-622-d:before,
+.owf-622-n:before {
+  content: "\ecce";
+}
+
+/*   Atmosphere - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/* mist */
+.owf-701:before,
+.owf-701-d:before,
+.owf-701-n:before {
+  content: "\ed1d";
+}
+
+/* smoke */
+.owf-711:before,
+.owf-711-d:before,
+.owf-711-n:before {
+  content: "\ed27";
+}
+
+/* haze */
+.owf-721:before,
+.owf-721-d:before,
+.owf-721-n:before {
+  content: "\ed31";
+}
+
+/* Sand/Dust Whirls */
+.owf-731:before,
+.owf-731-d:before,
+.owf-731-n:before {
+  content: "\ed3b";
+}
+
+/* Fog */
+.owf-741:before,
+.owf-741-d:before,
+.owf-741-n:before {
+  content: "\ed45";
+}
+
+/* sand */
+.owf-751:before,
+.owf-751-d:before,
+.owf-751-n:before {
+  content: "\ed4f";
+}
+
+/* dust */
+.owf-761:before,
+.owf-761-d:before,
+.owf-761-n:before {
+  content: "\ed59";
+}
+
+/*  VOLCANIC ASH  */
+.owf-762:before,
+.owf-762-d:before,
+.owf-762-n:before {
+  content: "\ed5a";
+}
+
+/* SQUALLS */
+.owf-771:before,
+.owf-771-d:before,
+.owf-771-n:before {
+  content: "\ed63";
+}
+
+/* TORNADO */
+.owf-781:before,
+.owf-781-d:before,
+.owf-781-n:before {
+  content: "\ed6d";
+}
+
+/*   Clouds - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/*  sky is clear  */
+/*  Calm  */
+.owf-800:before,
+.owf-800-d:before,
+.owf-951:before,
+.owf-951-d:before {
+  content: "\ed80";
+}
+
+.owf-800-n:before,
+.owf-951-n:before {
+  content: "\f168";
+}
+
+/*  few clouds   */
+.owf-801:before,
+.owf-801-d:before {
+  content: "\ed81";
+}
+
+.owf-801-n:before {
+  content: "\f169";
+}
+
+/* scattered clouds */
+.owf-802:before,
+.owf-802-d:before {
+  content: "\ed82";
+}
+
+.owf-802-n:before {
+  content: "\f16a";
+}
+
+/* broken clouds  */
+.owf-803:before,
+.owf-803-d:before,
+.owf-803-n:before {
+  content: "\ed83";
+}
+
+/* overcast clouds  */
+.owf-804:before,
+.owf-804-d:before,
+.owf-804-n:before {
+  content: "\ed84";
+}
+
+/*   Extreme - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/* tornado  */
+.owf-900:before,
+.owf-900-d:before,
+.owf-900-n:before {
+  content: "\ede4";
+}
+
+/*  tropical storm  */
+.owf-901:before,
+.owf-901-d:before,
+.owf-901-n:before {
+  content: "\ede5";
+}
+
+/* hurricane */
+.owf-902:before,
+.owf-902-d:before,
+.owf-902-n:before {
+  content: "\ede6";
+}
+
+/* cold */
+.owf-903:before,
+.owf-903-d:before,
+.owf-903-n:before {
+  content: "\ede7";
+}
+
+/* hot */
+.owf-904:before,
+.owf-904-d:before,
+.owf-904-n:before {
+  content: "\ede8";
+}
+
+/* windy */
+.owf-905:before,
+.owf-905-d:before,
+.owf-905-n:before {
+  content: "\ede9";
+}
+
+/* hail */
+.owf-906:before,
+.owf-906-d:before,
+.owf-906-n:before {
+  content: "\edea";
+}
+
+/*   Additional - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -    */
+/* Setting */
+.owf-950:before,
+.owf-950-d:before,
+.owf-950-n:before {
+  content: "\ee16";
+}
+
+/*  Light breeze  */
+.owf-952:before,
+.owf-952-d:before,
+.owf-952-n:before {
+  content: "\ee18";
+}
+
+/*  Gentle Breeze  */
+.owf-953:before,
+.owf-953-d:before,
+.owf-953-n:before {
+  content: "\ee19";
+}
+
+/*  Moderate breeze  */
+.owf-954:before,
+.owf-954-d:before,
+.owf-954-n:before {
+  content: "\ee1a";
+}
+
+/* Fresh Breeze  */
+.owf-955:before,
+.owf-955-d:before,
+.owf-955-n:before {
+  content: "\ee1b";
+}
+
+/* Strong  Breeze  */
+.owf-956:before,
+.owf-956-d:before,
+.owf-956-n:before {
+  content: "\ee1c";
+}
+
+/* High wind, near gale  */
+.owf-957:before,
+.owf-957-d:before,
+.owf-957-n:before {
+  content: "\ee1d";
+}
+
+/* Gale */
+.owf-958:before,
+.owf-958-d:before,
+.owf-958-n:before {
+  content: "\ee1e";
+}
+
+/*  Severe Gale  */
+.owf-959:before,
+.owf-959-d:before,
+.owf-959-n:before {
+  content: "\ee1f";
+}
+
+/* Storm */
+.owf-960:before,
+.owf-960-d:before,
+.owf-960-n:before {
+  content: "\ee20";
+}
+
+/*  Violent Storm  */
+.owf-961:before,
+.owf-961-d:before,
+.owf-961-n:before {
+  content: "\ee21";
+}
+
+/* Hurricane */
+.owf-962:before,
+.owf-962-d:before,
+.owf-962-n:before {
+  content: "\ee22";
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 35vh;
+  min-height: 22rem;
+  padding: 2rem;
+  overflow: hidden;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 500px) {
+  .header {
+    padding: 1.5rem;
+    column-gap: 2.8rem;
+    height: 25vh;
+  }
+}
+
+.player {
+  width: 19rem;
+  transition: opacity 1s, visibility 1s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.player_buttons {
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.player-controls {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.play-list {
+  text-align: left;
+  z-index: 15;
+}
+@media screen and (max-width: 500px) {
+  .play-list {
+    display: none;
+  }
+}
+
+.play-item {
+  position: relative;
+  font-family: "Arial";
+  padding: 4px;
+  padding-left: 2rem;
+  list-style: none;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.play-item .mini_icon {
+  background-image: url("../assets/svg/play1.svg");
+}
+
+.play-item:hover {
+  opacity: 1;
+}
+
+.play-item::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  font-weight: 900;
+}
+
+.item-active::before {
+  color: #C5B358;
+}
+
+.player-icon,
+.slider-icon,
+.change-quote {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-size: 3.2rem 3.2rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.player-icon:hover,
+.slider-icon:hover,
+.change-quote:hover {
+  opacity: 1;
+}
+
+.player-icon:active,
+.slider-icon:active,
+.change-quote:active {
+  border: 0;
+  outline: 0;
+  transform: scale(1.1);
+}
+
+.play {
+  width: 4rem;
+  height: 4rem;
+  background-size: 4rem 4rem;
+  background-image: url("../assets/svg/play.svg");
+}
+
+.pause {
+  background-image: url("../assets/svg/pause.svg");
+}
+
+.play-prev {
+  background-image: url("../assets/svg/play-prev.svg");
+}
+
+.play-next {
+  background-image: url("../assets/svg/play-next.svg");
+}
+
+.audio__controlls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-color: rgba(167, 167, 167, 0.322);
+  opacity: 0.8;
+  padding: 1rem 1.5rem;
+  border-radius: 1.2rem;
+}
+@media screen and (max-width: 500px) {
+  .audio__controlls {
+    max-width: 15rem;
+  }
+}
+
+.audio-track, .audio_time {
+  font-family: "Arial";
+  font-size: 1.3rem;
+}
+
+.audio-track {
+  margin-bottom: 1rem;
+}
+
+.audio__buttons {
+  display: flex;
+  align-items: center;
+  height: 1.8rem;
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.audio_button {
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: 0.3s;
+}
+
+.audio_button-hover:hover {
+  filter: invert(57%) sepia(29%) saturate(389%) hue-rotate(356deg) brightness(89%) contrast(90%);
+}
+
+.audio_button-justify {
+  margin-right: 1rem;
+}
+.audio_button-justify:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 500px) {
+  .audio_button-justify {
+    margin-right: 0.5rem;
+  }
+}
+
+.controlls_button {
+  position: relative;
+  height: 2.5rem;
+  width: 2rem;
+  background: transparent;
+  border: none;
+}
+
+.play_button {
+  width: 15px;
+  height: 18px;
+}
+
+.mini_button {
+  position: relative;
+  height: 20px;
+  width: 18px;
+  background: transparent;
+  border: none;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+
+.mini_icon {
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 10px;
+  height: 12px;
+  background-image: url("../assets/svg/play1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.mini_icon.active {
+  background-image: url("../assets/svg/pause1.svg");
+}
+
+.sound_button {
+  width: 1.8rem;
+  height: 1.5rem;
+}
+@media screen and (max-width: 500px) {
+  .sound_button {
+    width: 2.5rem;
+    height: 1.5rem;
+  }
+}
+
+.sound_i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/svg/volume1.svg");
+}
+.sound_i.active {
+  background-image: url("../assets/svg/mute1.svg");
+}
+
+.range {
+  background-color: #c4c4c4;
+  height: 6px;
+  border-radius: 8px;
+  outline: none;
+  transition: background-color 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.range::-webkit-slider-thumb {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: white;
+}
+
+.range1 {
+  width: 100%;
+  background: linear-gradient(to right, #C5B358 0%, #C5B358 0%, #c4c4c4 0%, #c4c4c4 100%);
+}
+
+.range2 {
+  background: linear-gradient(to right, #C5B358 0%, #C5B358 50%, #c4c4c4 50%, #c4c4c4 100%);
+  width: 100%;
+}
+
+.volume__container {
+  display: flex;
+  align-items: center;
+}
+
+.weather {
+  font-family: "Arial";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  row-gap: 5px;
+  width: 18rem;
+  min-height: 18rem;
+  text-align: left;
+  transition: opacity 1s, visibility 1s;
+  opacity: 1;
+  visibility: visible;
+}
+@media screen and (max-width: 500px) {
+  .weather {
+    width: 15rem;
+    min-height: 15rem;
+  }
+}
+
+.weather-error {
+  margin-top: -1rem;
+}
+
+.description-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 1.2rem;
+}
+
+.weather-icon {
+  font-size: 4.4rem;
+}
+@media screen and (max-width: 500px) {
+  .weather-icon {
+    font-size: 3.5rem;
+  }
+}
+
+.city {
+  width: 17rem;
+  height: 3.4rem;
+  padding: 5px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+}
+@media screen and (max-width: 500px) {
+  .city {
+    width: 13rem;
+    height: 3rem;
+    font-size: 1.8rem;
+  }
+}
+
+.city::placeholder {
+  font-size: 2rem;
+  color: #fff;
+  opacity: 0.6;
+}
+@media screen and (max-width: 500px) {
+  .city::placeholder {
+    font-size: 1.8rem;
+  }
+}
+
+.main {
+  position: relative;
+  display: flex;
+  filter: drop-shadow(2px 1px 2px #a7a6a6);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 35vh;
+  min-height: 2.6rem;
+  padding: 2rem;
+  z-index: 1;
+}
+@media screen and (max-width: 500px) {
+  .main {
+    padding: 1.5rem;
+    height: 40vh;
+  }
+}
+
+.slider-icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -1.6rem;
+  cursor: pointer;
+}
+
+.slide-prev {
+  left: 2rem;
+  background-image: url("../assets/svg/slider-prev.svg");
+}
+
+.slide-next {
+  right: 2rem;
+  background-image: url("../assets/svg/slider-next.svg");
+}
+
+.time {
+  min-height: 12.4rem;
+  min-width: 32rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Arial-MT";
+  font-size: 10rem;
+  letter-spacing: -4px;
+  transition: opacity 1s, visibility 1s;
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 768px) {
+  .time {
+    min-height: 8rem;
+    font-size: 7.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .time {
+    min-height: 6rem;
+    margin-bottom: 2rem;
+    font-size: 7rem;
+  }
+}
+
+.day {
+  min-height: 2.8rem;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  font-family: "Arial";
+  letter-spacing: 2px;
+  transition: opacity 1s, visibility 1s;
+  opacity: 1;
+  visibility: visible;
+}
+@media screen and (max-width: 500px) {
+  .day {
+    min-height: 8rem;
+    margin-bottom: 4.5rem;
+  }
+}
+
+.greeting-container {
+  display: flex;
+  align-items: center;
+  min-height: 4.8rem;
+  width: 100vw;
+  font-family: "Arial";
+  font-size: 4rem;
+  transition: opacity 1s, visibility 1s;
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 768px) {
+  .greeting-container {
+    min-height: 4rem;
+    font-size: 3.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .greeting-container {
+    flex-wrap: nowrap;
+    font-size: 2.5rem;
+  }
+}
+
+.greeting {
+  letter-spacing: 1px;
+  flex: 1;
+  font-size: 4rem;
+  padding: 1rem;
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .greeting {
+    padding: 0.5rem;
+    font-size: 3.2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .greeting {
+    font-size: 2.5rem;
+  }
+}
+
+.userName {
+  flex: 1;
+  max-width: 50%;
+  padding: 1rem;
+  font-size: 4rem;
+  text-align: left;
+  color: #fff;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+.userName::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+@media (max-width: 768px) {
+  .userName {
+    font-size: 3.2rem;
+    padding: 0.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .userName {
+    font-size: 2.5rem;
+  }
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+.overlay.active {
+  display: block;
+}
+
+.settings_icon {
+  align-self: start;
+  position: absolute;
+  left: 2rem;
+  bottom: 6rem;
+  width: 3rem;
+  height: 3rem;
+  background-image: url("../assets/svg/settings.svg");
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  transition: 0.3s;
+  opacity: 0.7;
+  z-index: 20;
+  filter: drop-shadow(1px 2px 2px #0c0c0c);
+}
+.settings_icon:hover {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+.settings__menu {
+  padding: 1.5rem;
+  position: absolute;
+  left: -32rem;
+  bottom: 5rem;
+  z-index: 15;
+  height: 64rem;
+  width: 30rem;
+  background-color: rgba(0, 0, 0, 0.972);
+  opacity: 0.8;
+  border-radius: 12px;
+  filter: drop-shadow(2px 2px 4px rgba(231, 229, 229, 0.644));
+  transition: left 0.6s;
+}
+
+.settings__menu.open {
+  left: 1rem;
+  transition: left 0.6s;
+}
+@media screen and (max-width: 500px) {
+  .settings__menu.open {
+    left: 0.7rem;
+  }
+}
+
+.menu_list {
+  font-family: "Arial";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  row-gap: 1.5rem;
+  text-align: left;
+}
+.menu_list input {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+.menu_list .set_name {
+  display: inline-block;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.menu_list .set_name:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.menu_list ul:after {
+  content: "";
+  width: 90%;
+  position: absolute;
+  left: 1.3rem;
+  border: 1px solid rgba(247, 240, 240, 0.5);
+}
+
+.hidden {
+  transition: opacity 1s, visibility 1s !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 5px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2rem;
+  width: 2rem;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+
+.option-input:hover {
+  background: #9faab7;
+}
+
+.option-input:checked {
+  background: #40e0d0;
+}
+
+.option-input:checked::before {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  content: "✔";
+  display: inline-block;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: "";
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+.option-input.radio {
+  border-radius: 50%;
+}
+
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+@keyframes click-wave {
+  0% {
+    height: 2rem;
+    width: 2rem;
+    opacity: 0.5;
+    position: relative;
+  }
+  100% {
+    height: 10rem;
+    width: 10rem;
+    margin-left: -4rem;
+    margin-top: -4rem;
+    opacity: 0;
+  }
+}
+.footer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+  min-height: 16rem;
+  padding: 2rem;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 500px) {
+  .footer {
+    height: 35vh;
+  }
+}
+
+.change-quote {
+  margin-bottom: 3rem;
+  background-image: url("../assets/svg/reload.svg");
+  transition: opacity 1s, visibility 1s, transform 0.5s;
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+  transform: rotate(0deg);
+}
+@media screen and (max-width: 500px) {
+  .change-quote {
+    margin-bottom: 4rem;
+  }
+}
+
+.quote-container {
+  transition: opacity 1s, visibility 1s;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: none;
+}
+
+.quote {
+  font-family: "Arial";
+  min-height: 3.2rem;
+}
+@media screen and (max-width: 500px) {
+  .quote {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.author {
+  font-family: "Arial";
+  min-height: 2rem;
+}
+
+.footer__data {
+  width: 100%;
+  justify-content: space-between;
+  align-items: end;
+  display: flex;
+  font-family: "Arial";
+  font-weight: bold;
+  margin-top: 2.2rem;
+  color: black;
+  filter: drop-shadow(2px 1px 2px #e7e5e5);
+}
+.footer__data a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  transition: 0.4s;
+}
+.footer__data a:hover {
+  color: #c4c4c4;
+}
+
+.rsschool {
+  width: 10rem;
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(2px 1px 2px #e7e5e5);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,338 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 35vh;
+  min-height: 22rem;
+  padding: 2rem;
+  overflow: hidden;
+  font-size: 1.6rem;
+    @media screen and (max-width: 500px) {
+      padding: 1.5rem;
+      column-gap: 2.8rem;
+      height: 25vh;
+    }
+}
+
+.player {
+  width: 19rem;
+  transition: opacity 1s, visibility 1s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.player_buttons {
+  width: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.player-controls {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.play-list {
+  text-align: left;
+  z-index: 15;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+}
+
+.play-item {
+  position: relative;
+  font-family: 'Arial';
+  padding: 4px;
+  padding-left: 2rem;
+  list-style: none;
+  opacity: .8;
+  transition: .3s;
+    .mini_icon {
+      background-image: url("../assets/svg/play1.svg");
+    }
+}
+
+.play-item:hover {
+  opacity: 1;
+}
+
+.play-item::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  font-weight: 900;
+}
+
+.item-active::before {
+  color: $color-dark-yellow;
+}
+
+.player-icon,
+.slider-icon,
+.change-quote {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-size: 3.2rem 3.2rem;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  opacity: .6;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.player-icon:hover,
+.slider-icon:hover,
+.change-quote:hover {
+  opacity: 1;
+}
+
+.player-icon:active,
+.slider-icon:active,
+.change-quote:active {
+  border: 0;
+  outline: 0;
+  transform: scale(1.1);
+}
+
+.play {
+  width: 4rem;
+  height: 4rem;
+  background-size: 4rem 4rem;
+  background-image: url("../assets/svg/play.svg");
+}
+
+.pause {
+  background-image: url("../assets/svg/pause.svg");
+}
+
+.play-prev {
+  background-image: url("../assets/svg/play-prev.svg");
+}
+
+.play-next {
+  background-image: url("../assets/svg/play-next.svg");
+}
+
+.audio__controlls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  background-color: rgba(167, 167, 167, 0.322);
+  opacity: 0.8;
+  padding: 1rem 1.5rem;
+  border-radius: 1.2rem;
+    @media screen and (max-width: 500px) {
+      max-width: 15rem;
+    }
+}
+
+.audio-track, .audio_time {
+  font-family: 'Arial';
+  font-size: 1.3rem;
+}
+
+.audio-track {
+  margin-bottom: 1rem;
+}
+
+.audio__buttons {
+  display: flex;
+  align-items: center;
+  height: 1.8rem;
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+.audio_button {
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: 0.3s;
+}
+
+.audio_button-hover {
+  &:hover {
+    filter: invert(57%) sepia(29%) saturate(389%) hue-rotate(356deg) brightness(89%) contrast(90%);
+  }
+}
+
+.audio_button-justify {
+  margin-right: 1rem;
+  &:last-child {
+    margin-right: 0;
+  }
+  @media screen and (max-width: 500px) {
+    margin-right: 0.5rem;
+  }
+}
+
+.controlls_button {
+  position: relative;
+  height: 2.5rem;
+  width: 2rem;
+  background: transparent;
+  border: none;
+}
+
+.play_button {
+  width: 15px;
+  height: 18px;
+}
+
+.mini_button {
+  position: relative;
+  height: 20px;
+  width: 18px;
+  background: transparent;
+  border: none;
+  transition: 0.3s;
+  margin-left: 10px;
+}
+
+.mini_icon {
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 10px;
+  height: 12px;
+  background-image: url("../assets/svg/play1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+    &.active {
+      background-image: url("../assets/svg/pause1.svg");
+    }
+}
+
+.sound_button {
+  width: 1.8rem;
+  height: 1.5rem;
+    @media screen and (max-width: 500px) {
+      width: 2.5rem;
+      height: 1.5rem;
+    }
+}
+
+.sound_i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/svg/volume1.svg");
+    &.active {
+      background-image: url("../assets/svg/mute1.svg");
+    }
+}
+
+.range {
+  background-color: $color-light-grey;
+  height: 6px;
+  border-radius: 8px;
+  outline: none;
+  transition: background-color 450ms ease-in;
+  -webkit-appearance: none;
+}
+
+.range::-webkit-slider-thumb {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  cursor: ew-resize;
+  background: $color-light;
+}
+
+.range1 {
+  width: 100%;
+  background: linear-gradient(to right, $color-dark-yellow 0%, $color-dark-yellow 0%, $color-light-grey 0%, $color-light-grey 100%);
+}
+
+.range2 {
+  background: linear-gradient(to right, $color-dark-yellow 0%, $color-dark-yellow 50%, $color-light-grey 50%, $color-light-grey 100%);
+  width: 100%;
+}
+
+.volume__container {
+  display: flex;
+  align-items: center;
+}
+
+.weather {
+  font-family: 'Arial';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  row-gap: 5px;
+  width: 18rem;
+  min-height: 18rem;
+  text-align: left;
+  transition: opacity 1s, visibility 1s;
+  opacity: 1;
+  visibility: visible;
+    @media screen and (max-width: 500px) {
+      width: 15rem;
+      min-height: 15rem;
+    }
+}
+
+.weather-error {
+  margin-top: -1rem;
+}
+
+.description-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 1.2rem;
+}
+
+.weather-icon {
+  font-size: 4.4rem;
+    @media screen and (max-width: 500px) {
+      font-size: 3.5rem;
+    }
+}
+
+.city {
+  width: 17rem;
+  height: 3.4rem;
+  padding: 5px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+    @media screen and (max-width: 500px) {
+      width: 13rem;
+      height: 3rem;
+      font-size: 1.8rem;
+    }
+}
+
+.city::placeholder {
+  font-size: 2rem;
+  color: #fff;
+  opacity: .6;
+    @media screen and (max-width: 500px) {
+      font-size: 1.8rem;
+    }
+}

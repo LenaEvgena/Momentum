@@ -1,0 +1,135 @@
+.main {
+  position: relative;
+  display: flex;
+  filter: drop-shadow(2px 1px 2px rgb(167, 166, 166));
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 35vh;
+  min-height: 2.6rem;
+  padding: 2rem;
+  z-index: 1;
+    @media screen and (max-width: 500px) {
+      padding: 1.5rem;
+      height: 40vh;
+    }
+}
+
+.slider-icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -1.6rem;
+  cursor: pointer;
+}
+
+.slide-prev {
+  left: 2rem;
+  background-image: url("../assets/svg/slider-prev.svg");
+}
+
+.slide-next {
+  right: 2rem;
+  background-image: url("../assets/svg/slider-next.svg");
+}
+
+.time {
+  min-height: 12.4rem;
+  min-width: 32rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Arial-MT';
+  font-size: 10rem;
+  letter-spacing: -4px;
+  transition: opacity 1s, visibility 1s;
+  opacity: 1;
+  visibility: visible;
+    @media (max-width: 768px) {
+      min-height: 8rem;
+      font-size: 7.2rem;
+    }
+    @media screen and (max-width: 500px) {
+      min-height: 6rem;
+      margin-bottom: 2rem;
+      font-size: 7rem;
+    }
+}
+
+.day {
+  min-height: 2.8rem;
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  font-family: 'Arial';
+  letter-spacing: 2px;
+  transition: opacity 1s, visibility 1s;
+  opacity: 1;
+  visibility: visible;
+    @media screen and (max-width: 500px) {
+      min-height: 8rem;
+      margin-bottom: 4.5rem;
+    }
+}
+
+.greeting-container {
+  display: flex;
+  // flex-wrap: wrap;
+  // justify-content: stretch;
+  align-items: center;
+  min-height: 4.8rem;
+  width: 100vw;
+  font-family: 'Arial';
+  font-size: 4rem;
+  transition: opacity 1s, visibility 1s;
+  opacity: 1;
+  visibility: visible;
+    @media (max-width: 768px) {
+      min-height: 4rem;
+      font-size: 3.2rem;
+    }
+    @media screen and (max-width: 500px) {
+      flex-wrap: nowrap;
+
+      font-size: 2.5rem;
+    }
+}
+
+.greeting {
+  letter-spacing: 1px;
+  flex: 1;
+  font-size: 4rem;
+  padding: 1rem;
+  text-align: right;
+    @media (max-width: 768px) {
+      padding: 0.5rem;
+      font-size: 3.2rem;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 2.5rem;
+    }
+}
+
+.userName {
+  flex: 1;
+  max-width: 50%;
+  padding: 1rem;
+  font-size: 4rem;
+  text-align: left;
+  color: #fff;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+    &::placeholder {
+      color: #fff;
+      opacity: .5;
+    }
+    @media (max-width: 768px) {
+      font-size: 3.2rem;
+      padding: 0.5rem;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 2.5rem;
+    }
+}
